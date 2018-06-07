@@ -27,7 +27,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    //ユーザー作成が成功したらタスク一覧へ 
+    protected $redirectTo = '/tasks';
 
     /**
      * Create a new controller instance.

@@ -25,7 +25,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    //ログインが成功したらタスク一覧へ 
+    protected $redirectTo = '/tasks';
 
     /**
      * Create a new controller instance.

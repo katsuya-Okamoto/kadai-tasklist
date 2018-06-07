@@ -2,9 +2,11 @@
 
 @section('content')
 
+<!--Welcome ページへ移植-->
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-            <h1>タスク一覧</h1>
+            <?php $user = Auth::user(); ?>
+            <h1>{{ $user->name }} のタスク一覧</h1>
     
             @if (count($tasks) > 0)
                 <table class="table table-striped">

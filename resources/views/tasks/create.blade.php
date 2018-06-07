@@ -8,8 +8,9 @@
             <h1>タスク新規作成ページ</h1>
             
                 {!! Form::model($task, ['route'=>'tasks.store']) !!}
-                
                 <div class="row">
+                    <?php $user = Auth::user(); ?>
+                    {{Form::hidden('user_id', $user->id)}}
                     <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
                         <div class="form-group">
                             {!! Form::label('status', '状態:') !!}
